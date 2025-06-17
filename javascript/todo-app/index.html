@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta lang="en" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h2 id="main-header">Todo</h2>
+    <div id="buttons">
+      <button class="btn" id="add">Add task</button>
+      <button class="btn" id="delete">Delete task</button>
+    </div>
+    <div class="container" id="main-cont">
+      <div class="task hidden">
+        <form id="new-task">
+          <label for="name">Task Name</label>
+          <input type="text" id="name" />
+          <label for="Description">Description</label>
+          <textarea style="resize: none" id="Description"></textarea>
+          <button class="btn" id="create-task">Create Task</button>
+        </form>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

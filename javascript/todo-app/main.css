@@ -1,0 +1,53 @@
+#main-header {
+  display: flex;
+  justify-content: center;
+  color: dimgrey;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+#new-task {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 25vw;
+}
+
+#new-task * {
+  padding: 5px;
+  margin: 5px;
+}
+
+#new-task textarea {
+  height: 15vh;
+}
+
+.btn {
+  padding: 5px 10px 5px 10px;
+  margin: 0px 5px 0px 5px;
+  background-color: lightseagreen;
+  border-style: none;
+  border-radius: 6px;
+  color: whitesmoke;
+}
+
+.btn:active {
+  /* give the button a "click" effect*/
+  background-color: rgb(89, 195, 195);
+  transform: scale(0.95);
+}
+
+.hidden {
+  display: none;
+}
