@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #buttons {
@@ -27,6 +28,17 @@
 #new-task * {
   padding: 5px;
   margin: 5px;
+}
+
+.todo {
+  border: solid 2px black;
+  width: 25vw;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+.todo input {
+  float: left;
 }
 
 #new-task textarea {
