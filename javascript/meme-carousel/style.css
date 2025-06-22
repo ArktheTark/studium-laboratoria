@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  background-color: beige;
+}
+
+.btn {
+  background-color: lightskyblue;
+  border: 1px solid black;
+}
+
+.container img {
+  object-fit: fill;
+  width: 15vw;
+  height: 25vh;
+}
