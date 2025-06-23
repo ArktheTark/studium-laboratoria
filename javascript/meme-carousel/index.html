@@ -9,7 +9,15 @@
   <body>
     <div class="container" id="carousel">
       <button type="button" class="btn" id="prev-btn">Previous</button>
-      <img src="images/business-cat.png" id="current-img" />
+      <div class="image_container">
+        <img
+          class="image active"
+          src="images/business-cat.png"
+          id="current_image"
+        />
+        <img class="image" src="" id="img-2" itemid="other_image" />
+      </div>
+
       <button type="button" class="btn" id="next-btn">Next</button>
     </div>
     <script src="script.js"></script>
