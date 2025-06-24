@@ -1,0 +1,5 @@
+- focus css selector for input
+- shorthand outline property
+- margin auto inside flex container
+- flask basics
+- forms
