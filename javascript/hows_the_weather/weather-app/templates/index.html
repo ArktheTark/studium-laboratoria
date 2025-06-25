@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <h1 id="header">What's the Weather?</h1>
-      <form id="weather-form">
+      <form id="weather-form" autocomplete="off">
         <p id="usr-prompt">
           Please enter the city you would like the current weather for:
         </p>
@@ -17,7 +17,9 @@
           <label for="city-name">City</label>
           <input type="text" name="city-name" placeholder="Ex: New York" />
         </div>
-        <button class="btn" type="" action="">Submit</button>
+        <button id="submit-btn" class="btn" type="submit" action="">
+          Submit
+        </button>
       </form>
     </div>
 

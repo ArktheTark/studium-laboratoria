@@ -1,3 +1,20 @@
-// for this project, I am going to have to build a flask app with python to be the backend
-// that way I can grab the api key from a .env file, process the request, and send it back to the front end.
-// a little more in depth for a project but whatever we will have to do it.
+const weatherForm = document.getElementById("weather-form");
+
+const getWeather = async function (event) {
+  // this prevents the form submit from trying to go to a backend
+  // essentially hijacking the submission so we can use js on it
+  event.preventDefault();
+
+  // creates a new FormData object instance
+  //event.target is the element the event listener is attached too.
+  // the FormData object simply creates a new object, and the properties are the input names of the
+  // input fields. And the values are the values of those input fields
+  const data = new FormData(event.target);
+  const weatherRequest = await fetch("/weather", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+  console.log(await weatherRequest.json());
+};
+
+weatherForm.addEventListener("submit", getWeather);
