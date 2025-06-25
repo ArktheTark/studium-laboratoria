@@ -13,13 +13,9 @@ def index():
 # I can think of use cases for both
 @app.route('/weather', methods=['POST'])
 def weatherCall():
-    if request.is_json:
-        print("received json")
-        data = request.get_json()
-        return jsonify({"message": "test", "received_data": data}), 200
-    else: 
-        print("error")
-        data = request.form.to_dict()
-        return jsonify({"message": "Data received successfully!", "received_data": data}), 200
+    data = request.form
+    
+    # returns a JSON object to the requestee
+    return jsonify({"city": data.get('city-name')}), 200
     
     # going to call the weather api here

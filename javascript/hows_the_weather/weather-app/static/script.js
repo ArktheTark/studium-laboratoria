@@ -10,9 +10,10 @@ const getWeather = async function (event) {
   // the FormData object simply creates a new object, and the properties are the input names of the
   // input fields. And the values are the values of those input fields
   const data = new FormData(event.target);
+  console.log(data);
   const weatherRequest = await fetch("/weather", {
     method: "POST",
-    body: JSON.stringify(data),
+    body: data, // at first I was using JSON.stringify(), but that was not giving expected behavior
   });
   console.log(await weatherRequest.json());
 };
