@@ -4,6 +4,7 @@
 - flask basics
 - forms
 - FormData object
+- dotenv
 - autocomplete attribute
   stringify
 - jsonify (python)

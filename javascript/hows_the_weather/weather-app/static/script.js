@@ -15,7 +15,8 @@ const getWeather = async function (event) {
     method: "POST",
     body: data, // at first I was using JSON.stringify(), but that was not giving expected behavior
   });
-  console.log(await weatherRequest.json());
+  const weatherData = await weatherRequest.json();
+  console.log(weatherData);
 };
 
 weatherForm.addEventListener("submit", getWeather);
