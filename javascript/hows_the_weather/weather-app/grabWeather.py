@@ -9,7 +9,7 @@ def grabCoords(city: str, key: str):
     return data['coord']
 
 def grabWeatherData(lat: int, lon: int, key: str):
-    url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={key}"
+    url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={key}&units=imperial"
     data = get(url).json()
 
     return data

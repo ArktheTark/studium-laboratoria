@@ -5,6 +5,8 @@
 - forms
 - FormData object
 - dotenv
+- flask redirecting and passing along data
+- flask session object
 - autocomplete attribute
   stringify
 - jsonify (python)
