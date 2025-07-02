@@ -14,6 +14,14 @@ const getWeather = async function (event) {
     method: "POST",
     body: data, // at first I was using JSON.stringify(), but that was not giving expected behavior
   });
+  // checks if the browser see the redirect response, and if so manually redirects with javascript
+  if (weatherRequest.ok) {
+    if (weatherRequest.url.endsWith("/weather/info")) {
+      console.log("redirect successful");
+      // could also have hardcoded '/weather/info' to get the redirect
+      window.location.href = weatherRequest.url;
+    }
+  }
   // const weatherData = await weatherRequest.json();
   // console.log(weatherData);
 };

@@ -1,4 +1,4 @@
-from flask import Flask,  request, render_template, jsonify, redirect, url_for
+from flask import Flask,  request, render_template, jsonify, redirect, url_for, session
 from os import environ
 from json import dumps
 from dotenv import load_dotenv
@@ -8,6 +8,9 @@ app = Flask(__name__)
 load_dotenv()
 # loads the weather_key from the .env file
 key = environ['weather_key']
+
+# setting the secret key for the session object
+app.config['SECRET_KEY'] = environ['session_key']
 
 # routes boi
 @app.route('/')
@@ -30,6 +33,7 @@ def weatherCall():
         "weather": weather_data['weather'][0]['description']
     }
     # grab temp, temp_max, temp_min, feels_like, 
+    session['weather_data'] = current_weather
 
     # returns a JSON object to the requestee
     return redirect(url_for('showWeatherInfo'))
@@ -37,6 +41,7 @@ def weatherCall():
 
 @app.route('/weather/info')
 def showWeatherInfo():
-    data = session
-    return render_template('weather.html')
+    data = session.get('weather_data')
+    # passing the data to be used with jinja 2 in the template file
+    return render_template('weather.html', data=data)
 

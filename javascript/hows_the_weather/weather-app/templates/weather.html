@@ -10,7 +10,13 @@
     <div class="container">
       <header>test</header>
     </div>
-
+    <script>
+      const weather_data = {
+        // tojson converts the python dictionary to json, otherwise you will get an error
+        data: {{ data | tojson }},
+      };
+      console.log(weather_data);
+    </script>
     <script src="/static/script.js"></script>
   </body>
 </html>
