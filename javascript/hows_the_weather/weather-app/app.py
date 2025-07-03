@@ -1,6 +1,5 @@
 from flask import Flask,  request, render_template, jsonify, redirect, url_for, session
 from os import environ
-from json import dumps
 from dotenv import load_dotenv
 import grabWeather
 app = Flask(__name__)
