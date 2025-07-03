@@ -26,6 +26,7 @@ def weatherCall():
     # using coords from above method, grab weather data for city
     weather_data = grabWeather.grabWeatherData(coord_data['lat'], coord_data['lon'], key)
     current_weather = {
+        "city-name": city,
         "current_temp": weather_data['main']['temp'],
         "feels_like": weather_data['main']['feels_like'],
         "max_temp": weather_data['main']['temp_max'],

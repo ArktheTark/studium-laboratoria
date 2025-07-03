@@ -10,6 +10,7 @@
 - autocomplete attribute
   stringify
 - jsonify (python)
+- Post/Redirect/Get (PRG) pattern
 - originally I was doing this, but when sending to a flask backend, sending just the object is completely fine. Using stringify will not let flask read the request data properly.
 
 - autocomplete attribute

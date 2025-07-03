@@ -8,7 +8,29 @@
   </head>
   <body>
     <div class="container">
-      <header>test</header>
+      <div id="weather-info">
+        <h2 id="city">test</h2>
+        <div class="row-item">
+          <label for="weather">Weather: </label>
+          <p id="weather"></p>
+        </div>
+        <div class="row-item">
+          <label for="current">Current: </label>
+          <p id="current"></p>
+        </div>
+        <div class="row-item">
+          <label for="feels_like">Feels Like: </label>
+          <p id="feels-like"></p>
+        </div>
+        <div class="row-item">
+          <label for="max">Max: </label>
+          <p id="max"></p>
+        </div>
+        <div class="row-item">
+          <label for="min">Min: </label>
+          <p id="min"></p>
+        </div>
+      </div>
     </div>
     <script>
       const weather_data = {
@@ -17,6 +39,6 @@
       };
       console.log(weather_data);
     </script>
-    <script src="/static/script.js"></script>
+    <script src="/static/showinfo.js"></script>
   </body>
 </html>

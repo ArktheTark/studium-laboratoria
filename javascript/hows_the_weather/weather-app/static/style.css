@@ -54,3 +54,26 @@ body {
   background-color: #ffc107;
   border: 1px solid black;
 }
+
+#weather-info {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  border: 5px solid #ffc107;
+  width: 25vw;
+  height: 50vw;
+  background-color: #f8f8f8;
+  color: #333333;
+}
+
+#weather-info h2 {
+  align-self: center;
+}
+
+.row-item {
+  display: flex;
+}
+
+.row-item label {
+  font-weight: bolder;
+}
