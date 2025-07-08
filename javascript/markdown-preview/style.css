@@ -1,3 +1,7 @@
+body {
+  background-color: darkgrey;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -5,13 +9,24 @@
   flex-direction: column;
 }
 
-input[type="textarea"] {
+textarea {
   text-align: left;
-
+  background-color: rgb(234, 234, 234);
+  padding: 25px;
+  resize: none;
   width: 75vw;
   height: 50vh;
 }
 
+textarea:focus {
+  outline: none;
+  border: 1px solid green;
+}
+
 #preview {
-  background-color: darkgrey;
+  background-color: rgb(234, 234, 234);
+  border: 1px solid black;
+  padding: 25px;
+  width: 75vw;
+  height: 50vh;
 }
