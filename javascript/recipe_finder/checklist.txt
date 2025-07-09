@@ -1,0 +1,21 @@
+Requirements:
+
+Let user search for recipes
+- By meal name
+- By main ingredient
+- random meal
+- category
+- area/region
+
+Display Recipe
+- display all ingredients
+- display recipe
+- display image
+
+Saving Favorites:
+- have the ability to save favorites
+- implement a menu where use can navigate to search and to favorites
+
+Validation:
+- have validation that a recipe exists for the input from the user
+- if it doesn't, display a message. 
